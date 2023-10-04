@@ -18,9 +18,13 @@ public class TankShooting : MonoBehaviour
     private string m_FireButton;                // The input axis that is used for launching shells.
     private float m_CurrentLaunchForce;         // The force that will be given to the shell when the fire button is released.
     private float m_ChargeSpeed;                // How fast the launch force increases, based on the max charge time.
-    private bool m_Fired;                       // Whether or not the shell has been launched with this button press.
+    private bool m_Fired = true;                       // Whether or not the shell has been launched with this button press.
 
-
+    public bool IsCharging {
+        get{
+            return !m_Fired;
+        }
+    }
     private void OnEnable()
     {
         // When the tank is turned on, reset the launch force and the UI
