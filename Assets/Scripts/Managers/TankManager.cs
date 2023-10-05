@@ -55,7 +55,7 @@ public class TankManager
     // Used during the phases of the game where the player shouldn't be able to control their tank.
     public void DisableControl ()
     {
-        m_Movement.enabled = false;
+        //m_Movement.enabled = false;
         m_Shooting.enabled = false;
 
         m_CanvasGameObject.SetActive (false);

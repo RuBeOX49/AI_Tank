@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
         yield return StartCoroutine (RoundPlaying());
 
         // Once execution has returned here, run the 'RoundEnding' coroutine, again don't return until it's finished.
-        yield return StartCoroutine (RoundEnding());
+        //yield return StartCoroutine (RoundEnding());
 
         // This code is not run until 'RoundEnding' has finished.  At which point, check if a game winner has been found.
         if (m_GameWinner != null)
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
         {
             // If there isn't a winner yet, restart this coroutine so the loop continues.
             // Note that this coroutine doesn't yield.  This means that the current version of the GameLoop will end.
-            StartCoroutine (GameLoop ());
+            //StartCoroutine (GameLoop ());
         }
     }
 
